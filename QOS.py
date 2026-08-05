@@ -270,6 +270,7 @@ def main_menu():
                         print("You have a free ice-cream and a free drink")
                         print("Remember to take a screenshot in case you lose your progress!")
                         generate_voucher()
+                        voucher = generate_voucher()
                         print("Your voucher is: ", voucher)
                 
 
