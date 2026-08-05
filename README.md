@@ -1,2 +1,7 @@
 # secretProject-QOS
-A restaurant Quality Management System (QMS) is an organized framework of policies and procedures designed to guarantee food safety, consistent service, and customer satisfaction. It enables restaurants to meet regulatory standards, exceed guest expectations, and drive continuous operational improvement.
+A Restaurant Queue Order System (QOS) is a hardware and software framework designed to manage, streamline, and track customer orders from the moment they are placed until they are fulfilled. It bridges between the patrons and the restaurant staff while the patrons wait for their turn to get a table.
+Improved features include:
++ 2 games
++ points system
++ soup of the day
++ discounts and rewards
