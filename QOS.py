@@ -7,7 +7,7 @@ NumberOfCust = 14
 
 waitingTime = 0
 while True:
-    print("There are about {} waiting in front of you".format(NumberOfCust))
+    print("There are about {} people queuing in front of you".format(NumberOfCust))
     print()
     print()
     print("====== Discounts and Restaurant Insights =====")
