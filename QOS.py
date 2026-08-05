@@ -1,4 +1,5 @@
 import random
+from datetime import datetime
 
 print("=+=+=+=+=+=+=+= Welcome to Sea Bounty House =+=+=+=+=+=")
 option = -1
@@ -10,6 +11,8 @@ while True:
     print("Today's special: 95% of guests ordered the grilled chicken.")
     print("There will be a discount of about 5% if you spend a minimum of $50")
     option = int(input("Choose your option (0 for exit())"))
+    if option == 0:
+        exit()
     if option == 1:
         if NumberOfCust <= 5:
             waitingTime = 8
@@ -39,6 +42,23 @@ while True:
             waitingTime = 60
             print("The waiting time may be longer than an hour")
 
+    if option == 2:
+            print("========THE SOUP OF THE DAY=======")
+            today = datetime.today().weekday()
+            if today % 7 == 0:
+                print("The soup of the day is tomato soup")
+            elif today == 1:
+                print("The soup of the day is calm soup")
+            elif today == 2:
+                print("The soup of the day is seafood soup")
+            elif today % 3 == 0:
+                print("The soup of the day is miso soup")
+            elif today == 4:
+                print("The soup of the day is vegetable soup")
+            elif today == 5:
+                print("The soup of the day is tofu soup")
+            else:
+                print("The soup of the day is beef stew")
         
                 
 
