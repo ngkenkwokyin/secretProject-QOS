@@ -1,2 +1,2 @@
 # secretProject-QOS
-A restaurant Quality Management System (QMS) is a structured framework of policies, procedures, and processes that ensures food quality, food safety, service consistency, and customer satisfaction. It helps the restaurant consistently meet customer expectations and comply with regulatory requirements while continuously improving its operations.
+A restaurant Quality Management System (QMS) is an organized framework of policies and procedures designed to guarantee food safety, consistent service, and customer satisfaction. It enables restaurants to meet regulatory standards, exceed guest expectations, and drive continuous operational improvement.
