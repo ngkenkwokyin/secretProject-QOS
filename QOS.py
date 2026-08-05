@@ -11,7 +11,7 @@ while True:
     print()
     print()
     print("====== Discounts and Restaurant Insights =====")
-    print("Today's special: 95% of guests ordered the grilled chicken.")
+    print("Today's special: 95% of guests ordered the grilled squid.")
     print("There will be a discount of about 5% if you spend a minimum of $50")
     option = int(input("Choose your option (0 for exit())"))
     if option == 0:
