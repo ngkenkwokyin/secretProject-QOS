@@ -59,6 +59,8 @@ while True:
                 print("The soup of the day is tofu soup")
             else:
                 print("The soup of the day is beef stew")
+            print()
+            print()
         
                 
 
