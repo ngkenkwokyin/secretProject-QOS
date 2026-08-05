@@ -1,6 +1,9 @@
 import random
 from datetime import datetime, timedelta # timedelta for time difference
 from time import sleep
+import secrets #make it secure so people wont abuse generate fake codes, cryptography included
+import string
+points = 0 
 
 print("=+=+=+=+=+=+=+= Welcome to Sea Bounty House =+=+=+=+=+=+=+=")
 option = -1
@@ -8,8 +11,9 @@ NumberOfCust = 14 #test data, can be ported from API
 
 waitingTime = 0
 table_status = "Not ready"
-ready_time = None
+ready_time = None #save ready time info
 extra_time = None
+
 
 def waiting_status():
     global waitingTime
@@ -42,9 +46,13 @@ def waiting_status():
         print("Returning to main menu...")
         return main_menu()
     
+def generate_voucher():
+    chars = string.ascii_uppercase + string.digits
+    return ''.join(secrets.choice(chars) for _ in range(8))
 
 def main_menu():
     while True:
+        
         print()
         print()
         print("==== WAITING INFORMATION ====")
@@ -58,8 +66,9 @@ def main_menu():
         print()
         print()
         print("================ SELECT YOUR OPTION ================")
-        print("Type 0 for exit the QOS terminal system, Type 1 for waiting status, Type 2 for soup of the day")
+        print("Type 0 for exit the QOS terminal system, option 1 for waiting status, option 2 for soup of the day, option 3 for Game 1, option 4 for Game 2, option 5 for game points & rewards ")
         option = int(input("Choose your option (0 for exit())"))
+        global points
         if option == 0:
             #break
             exit()
@@ -72,7 +81,6 @@ def main_menu():
                 ready_time = datetime.now() + timedelta(minutes=8)
                 while datetime.now() < ready_time:
                     sleep(1) #count per second
-                
                 table_status = "Preparing your table"
                 print("🟡 Preparing your table")
                 sleep(600) # 10 mins
@@ -178,6 +186,102 @@ def main_menu():
                     print("The soup of the day is beef stew")
                 print()
                 print()
+
+        if option == 3:
+                while True:
+                    print("==== ROCK PAPER SCISSORS ==== ")
+
+                    choice = ['rock', 'paper', 'scissors']
+                    machine_choice = random.choice(choice)
+
+                    your_choice = input("choose your pick (rock, paper, scissors)").lower()
+
+                    if your_choice == machine_choice:
+                            print('Draw')
+                            print("You chose:", your_choice)
+                            print("Machine chose:", machine_choice)
+                            points += 1
+                            print("You have earned one point.")
+                    elif (your_choice == "rock" and machine_choice == "scissors") or \
+                        (your_choice == "paper" and machine_choice == "rock") or \
+                        (your_choice == "scissors" and machine_choice == "paper"):
+                        print("You win!")
+                        print("You chose:", your_choice)
+                        print("Machine chose:", machine_choice)
+                        points += 3
+                        print("You have earned 3 points")
+
+                    else:
+                            print("Computer win")
+                            print("You have earned 0 points")
+
+# validation checks
+                    if your_choice not in choice:
+                            print("Invalid input")
+                            continue
+
+                    exit_choice = input("Do you want to exit this game? (yes/no): ").lower()
+
+                    if exit_choice == "yes":
+                            break
+                    else:
+                            continue
+                  
+        if option == 4:
+                while True:
+                    y = random.randint(1,12)
+                    z = random.randint(1,10)
+                    print("===== TIMES TABLE GAME =====")
+                    print("Note: You are to only be allowed to enter a number")
+                    prompt_input = input("What is {} × {}? ".format(y,z))
+                    if not prompt_input.isnumeric():
+                                            print("Invalid format")
+                    answer = int(prompt_input) 
+                    answer_key = y * z
+                    if answer == answer_key:
+                            print("Well done! You got it right!")
+                            print("You got a point")
+                            points += 1
+                    else:
+                            print("You got it wrong!")
+                            print("No points awarded")
+
+                    exit_choice = input("Do you want to exit this game? (yes/no): ").lower()
+                    
+                    if exit_choice == "yes":
+                            break
+
+
+        if option == 5:
+                print()
+                print()
+                print("======= GAME POINTS AND REWARD SYSTEM =======")
+                print("You have {} points".format(points))
+
+                if points > 5:
+                        print("You have a free ice-cream")
+                        print("Remember to take a screenshot in case you lose your progress!")
+                        generate_voucher()
+                        voucher = generate_voucher()
+                        print("Your voucher is: ", voucher)
+
+
+                if points > 30:
+                        print("You have a free ice-cream and a free drink")
+                        print("Remember to take a screenshot in case you lose your progress!")
+                        generate_voucher()
+                        print("Your voucher is: ", voucher)
+                
+
+
+               
+
+
+
+    
+
+
+
         else:
                 print()
                 print()
