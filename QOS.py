@@ -67,7 +67,7 @@ def main_menu():
         print()
         print()
         print("================ SELECT YOUR OPTION ================")
-        print("\nType 0 for exit the QOS terminal system\t \noption 1 for waiting status\t \noption 2 for soup of the day\t \noption 3 for Game 1\t \noption 4 for Game 2\t \noption 5 for game points & rewards \n")
+        print("\nType 0 for exit the QOS terminal system\t \noption 1 for waiting status\t \noption 2 for soup of the day\t \noption 3 for Game 1\t \noption 4 for Game 2\t \noption 5 for game points & rewards \noption 6 for multiplier game (No rewards counted)\t \noption 7 for game colour\t")
         option = int(input("Choose your option (0 for exit())"))
         global points
         if option == 0:
@@ -273,10 +273,51 @@ def main_menu():
                         generate_voucher()
                         voucher = generate_voucher()
                         print("Your voucher is: ", voucher)
-                
 
 
-               
+
+        elif option == 6:
+                print("Placeholder text")
+
+        elif option == 7:
+                print("\t\t\t===== OPTIONS =====\t\t\t")
+                print("\n 1: Dark Blue \n 2: Green \n 3: Light Blue \n 4: Red \n 5: Purple \n 6: Yellow \n 7: Reset to default colour")
+                print("Please enter a number between 1 to 7")
+                try:
+                    colour_selecter = int(input("Select your preferred color option: "))
+                    if colour_selecter == 1:
+                            os.system("color 01")
+                            print("The colour has been set to dark blue.")
+                    elif colour_selecter == 2:
+                            os.system("color 02")
+                            print("The colour has been set to green.")
+                    elif colour_selecter == 3:
+                            os.system("color 03")
+                            print("The colour has been set to light blue.")
+                    elif colour_selecter == 4:
+                            os.system("color 04")
+                            print("The colour has been set to red.")
+                    elif colour_selecter == 5:
+                            os.system("color 05")
+                            print("The colour has been set to purple.")
+                    elif colour_selecter == 6:
+                            os.system("color 06")
+                            print("The colour has been set to yellow.")
+                    elif colour_selecter == 7:
+                            os.system("color 07")
+                            print("The colour is resetted to default.")
+                    else:
+                            
+                            print("\t\t\t=====ERROR MESSAGE=====\t\t\t")
+                            print("Your option is invalid, please enter a number between 1 -7 ")
+                except ValueError:
+                        print()
+                        print("\t\t\t===== ERROR MESSAGE =====\t\t\t")
+                        print()
+                        print("ERROR: PLEASE ENTER A NUMBER BETWEEN 1 TO 7")
+
+
+                               
 
 
 
@@ -291,7 +332,6 @@ def main_menu():
                 print("Invalid Option")
                 continue
         
-
 #start the program
 main_menu()
         
