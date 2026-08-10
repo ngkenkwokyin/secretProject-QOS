@@ -3,6 +3,7 @@ from datetime import datetime, timedelta # timedelta for time difference
 from time import sleep
 import secrets #make it secure so people wont abuse generate fake codes, cryptography included
 import string
+import os
 points = 0 
 
 print("=+=+=+=+=+=+=+= Welcome to Sea Bounty House =+=+=+=+=+=+=+=")
@@ -66,7 +67,7 @@ def main_menu():
         print()
         print()
         print("================ SELECT YOUR OPTION ================")
-        print("Type 0 for exit the QOS terminal system, option 1 for waiting status, option 2 for soup of the day, option 3 for Game 1, option 4 for Game 2, option 5 for game points & rewards ")
+        print("\nType 0 for exit the QOS terminal system\t \noption 1 for waiting status\t \noption 2 for soup of the day\t \noption 3 for Game 1\t \noption 4 for Game 2\t \noption 5 for game points & rewards ")
         option = int(input("Choose your option (0 for exit())"))
         global points
         if option == 0:
