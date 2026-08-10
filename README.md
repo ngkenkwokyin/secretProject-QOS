@@ -5,3 +5,5 @@ Improved features includes:
 + points system
 + soup of the day
 + discounts and rewards
++ 1 multiplayer game
++ change text color setting 
