@@ -280,8 +280,41 @@ def main_menu():
 
 
         elif option == 6:
-                print("Placeholder text")
-
+                print("===== GUESS THE NUMBER (Multipler game) =====")
+                print("You only can pick between 1 to 100")
+                print("WARNING: This game does not have any reward points, if you want, please select")
+                try:
+                        guess = int(input("Please enter a number (between 1 - 100): "))
+                        if guess >= 101 and guess <= 0:
+                                print("Not valid number, number must be between 1 to 100")
+                                continue
+                        else:
+                                print()
+                                print()
+                                print()
+                                print()
+                                print("Scroll up do not look before passing on to the next person")
+                                x = 3
+                                print("You only have 3 tries.")
+                                while x > 0: 
+                                        new_guess = int(input("Player 2, guess what is the number Player 1 entered: "))
+                                        if new_guess == guess:
+                                                print("You guess it right")
+                                                print("Thanks for playing. Feel free to explore other options.")
+                                                main_menu()
+                                        else:
+                                                print("Wrong guess.")
+                                                print("You have {} tries left.".format(x-1))
+                                                x -= 1
+                                        print("Thanks for playing. Feel free to explore other options.")
+                               
+                                        
+                                
+                except ValueError:
+                        print()
+                        print("===== ERROR MESSAGE =====")  
+                        print()
+                        print("PLEASE ENTER A NUMBER BETWEEN 1 TO 100")
         elif option == 7:
                 print("\t\t\t===== OPTIONS =====\t\t\t")
                 print("\n 1: Dark Blue \n 2: Green \n 3: Light Blue \n 4: Red \n 5: Purple \n 6: Yellow \n 7: Reset to default colour")
