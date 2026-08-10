@@ -1,0 +1,11 @@
+CREDIT NOTICE
+
+You may use, copy, or modify the code in this project, provided that
+the original author is credited by including the GitHub username:
+
+ngkenkwokyin
+https://github.com/ngkenkwokyin
+
+The author's GitHub username must remain visible in the relevant project
+files, documentation, credits, or other appropriate attribution notices.
+Please do not remove or hide this credit when using the code.
