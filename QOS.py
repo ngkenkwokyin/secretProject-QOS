@@ -67,7 +67,7 @@ def main_menu():
         print()
         print()
         print("================ SELECT YOUR OPTION ================")
-        print("\nType 0 for exit the QOS terminal system\t \noption 1 for waiting status\t \noption 2 for soup of the day\t \noption 3 for Game 1\t \noption 4 for Game 2\t \noption 5 for game points & rewards ")
+        print("\nType 0 for exit the QOS terminal system\t \noption 1 for waiting status\t \noption 2 for soup of the day\t \noption 3 for Game 1\t \noption 4 for Game 2\t \noption 5 for game points & rewards \n")
         option = int(input("Choose your option (0 for exit())"))
         global points
         if option == 0:
@@ -168,7 +168,7 @@ def main_menu():
                 table_status = "Your table is ready"
         
 
-        if option == 2:
+        elif option == 2:
                 print("========THE SOUP OF THE DAY=======")
                 today = datetime.today().weekday()
                 if today % 7 == 0:
@@ -188,7 +188,7 @@ def main_menu():
                 print()
                 print()
 
-        if option == 3:
+        elif option == 3:
                 while True:
                     print("==== ROCK PAPER SCISSORS ==== ")
 
@@ -228,7 +228,7 @@ def main_menu():
                     else:
                             continue
                   
-        if option == 4:
+        elif option == 4:
                 while True:
                     y = random.randint(1,12)
                     z = random.randint(1,10)
@@ -253,7 +253,7 @@ def main_menu():
                             break
 
 
-        if option == 5:
+        elif option == 5:
                 print()
                 print()
                 print("======= GAME POINTS AND REWARD SYSTEM =======")
