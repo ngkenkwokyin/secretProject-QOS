@@ -4,7 +4,10 @@ from time import sleep
 import secrets #make it secure so people wont abuse generate fake codes, cryptography included
 import string
 import os
+from colorama import Fore, init
 points = 0 
+print("===== BEFORE USING THIS PROGRAM =====")
+print("If you want to use option 7, please install pip install colorama in your terminal")
 
 print("=+=+=+=+=+=+=+= Welcome to Sea Bounty House =+=+=+=+=+=+=+=")
 option = -1
@@ -283,28 +286,35 @@ def main_menu():
                 print("\t\t\t===== OPTIONS =====\t\t\t")
                 print("\n 1: Dark Blue \n 2: Green \n 3: Light Blue \n 4: Red \n 5: Purple \n 6: Yellow \n 7: Reset to default colour")
                 print("Please enter a number between 1 to 7")
+                init()
                 try:
                     colour_selecter = int(input("Select your preferred color option: "))
                     if colour_selecter == 1:
                             os.system("color 01")
+                            print(Fore.BLUE, end="") #turn on everything to that colour
                             print("The colour has been set to dark blue.")
                     elif colour_selecter == 2:
                             os.system("color 02")
+                            print(Fore.GREEN, end="")
                             print("The colour has been set to green.")
                     elif colour_selecter == 3:
                             os.system("color 03")
+                            print(Fore.LIGHTBLUE_EX, end="")
                             print("The colour has been set to light blue.")
                     elif colour_selecter == 4:
                             os.system("color 04")
+                            print(Fore.RED, end="")
                             print("The colour has been set to red.")
                     elif colour_selecter == 5:
                             os.system("color 05")
                             print("The colour has been set to purple.")
                     elif colour_selecter == 6:
                             os.system("color 06")
+                            print(Fore.YELLOW, end="")
                             print("The colour has been set to yellow.")
                     elif colour_selecter == 7:
                             os.system("color 07")
+                            print(Fore.RESET, end="")
                             print("The colour is resetted to default.")
                     else:
                             
