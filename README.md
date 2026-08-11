@@ -8,6 +8,11 @@ Improved features includes:
 + 1 multiplayer game
 + change text color setting
 
+
+## Reason for this project
+
+Instead of keeping the patron waiting for their table to be ready, I developed interactive features that enhanced the patron experience, including games, a daily soup feature, and personalized color settings, helping the system stand out from conventional solutions. This solution intends to help with reducing patron wait times and improving table turnover efficiency by introducing interactive entertainment and guest engagement features.
+
   ## Credit
 
 This project includes code created by ngkenkwokyin(https://github.com/ngkenkwokyin).
