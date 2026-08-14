@@ -8,8 +8,8 @@ Improved features includes:
 + 1 multiplayer game
 + change text color setting
 
-  ## Pre-requisite before using this program
-  If you want to use option 7, please install pip install colorama in your VS code terminal or whatever software or terminal you are using to run this program.
+## Pre-requisite before using this program
+If you want to use option 7, please install pip install colorama in your VS code terminal or whatever software or terminal you are using to run this program.
 
 
 ## Reason for this project
