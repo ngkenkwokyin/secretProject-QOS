@@ -7,6 +7,7 @@ Improved features includes:
 + discounts and rewards
 + 1 multiplayer game
 + change text color setting
++ change font brightness / thickness setting aka font weight
 
 ## Pre-requisite before using this program
 If you want to use option 7, please install pip install colorama in your VS code terminal or whatever software or terminal you are using to run this program.
