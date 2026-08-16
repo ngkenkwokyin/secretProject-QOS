@@ -4,7 +4,7 @@ from time import sleep
 import secrets #make it secure so people wont abuse generate fake codes, cryptography included
 import string
 import os
-from colorama import Fore, init
+from colorama import Fore, Style, init
 points = 0 
 print("===== BEFORE USING THIS PROGRAM =====")
 print("If you want to use option 7, please install pip install colorama in your terminal")
@@ -167,7 +167,7 @@ def main_menu():
         print()
         print()
         print("================ SELECT YOUR OPTION ================")
-        print("\nType 0 for exit the QOS terminal system\t \noption 1 for waiting status\t \noption 2 for soup of the day\t \noption 3 for Game 1\t \noption 4 for Game 2\t \noption 5 for game points & rewards \noption 6 for multiplier game (No rewards counted)\t \noption 7 for game colour\t")
+        print("\nType 0 for exit the QOS terminal system\t \noption 1 for waiting status\t \noption 2 for soup of the day\t \noption 3 for Game 1\t \noption 4 for Game 2\t \noption 5 for game points & rewards \noption 6 for multiplier game (No rewards counted)\t \noption 7 for game colour and text thickness (font weight)\t")
         option = int(input("Choose your option (0 for exit())"))
         global points
         if option == 0:
@@ -433,8 +433,8 @@ def main_menu():
                         print("PLEASE ENTER A NUMBER BETWEEN 1 TO 100")
         elif option == 7:
                 print("\t\t\t===== OPTIONS =====\t\t\t")
-                print("\n 1: Dark Blue \n 2: Green \n 3: Light Blue \n 4: Red \n 5: Purple \n 6: Yellow \n 7: Reset to default colour")
-                print("Please enter a number between 1 to 7")
+                print("\n 1: Dark Blue \n 2: Green \n 3: Light Blue \n 4: Red \n 5: Purple \n 6: Yellow \n 7: Reset to default colour \n 8: Change text thickness (font weight)")
+                print("Please enter a number between 1 to 8")
                 init()
                 try:
                     colour_selecter = int(input("Select your preferred color option: "))
@@ -465,10 +465,27 @@ def main_menu():
                             os.system("color 07")
                             print(Fore.RESET, end="")
                             print("The colour is resetted to default.")
+
+                    elif colour_selecter == 8:
+                            print("\t\t\t===== CHOOSE YOUR OPTIONS ===== \t\t\t")
+                            print("\n 1: Bold and thick text \n 2: Dimmer text \n 3: reset to default")
+                            font_weight_input = input("Please choose how thick the font you want using the options above: ")
+                            if font_weight_input == "1":
+                                    print(Style.BRIGHT, end="")
+                                    print("Your font is now thicker")
+                            elif font_weight_input == "2":
+                                    print(Style.DIM, end="")
+                                    print("Your font is now dimmer")
+                            elif font_weight_input == "3":
+                                    print(Style.NORMAL, end="")
+                                    print("Your font is now resetted to the default thickness.")
+                            else:
+                                     print("\t\t\t=====ERROR MESSAGE=====\t\t\t")
+                                     print("Your option is invalid, please enter a number between 1 - 3 ")
                     else:
                             
                             print("\t\t\t=====ERROR MESSAGE=====\t\t\t")
-                            print("Your option is invalid, please enter a number between 1 -7 ")
+                            print("Your option is invalid, please enter a number between 1 - 8 ")
                 except ValueError:
                         print()
                         print("\t\t\t===== ERROR MESSAGE =====\t\t\t")
