@@ -22,3 +22,5 @@ This project includes code created by ngkenkwokyin(https://github.com/ngkenkwoky
 
 You are welcome to use or modify the code, as long as the author's GitHub username remains credited. Please keep this attribution in the project, documentation, or another visible credit section when reusing the code.
 
+## Project details
+The project file QOS.py has been completed on 16 Aug 2026 
