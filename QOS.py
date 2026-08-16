@@ -64,30 +64,36 @@ def new_game():
 
         if continue_input == "Y":
                 print("\t\t\t ===== NEW GAME ===== \t\t\t")
-                print("\n Type the full name of the role: \n Memeber \n Imposter \n Sheriff \n Survivor")
+                print("\n Type the full name of the role: \n Member \n Imposter \n Sheriff \n Survivor")
                 user_input = input("What is the role you choose: ").capitalize()
                 if user_input not in char_list:
                         print("\t\t\t ===== ERROR MESSAHE ===== \t\t\t")
                         print("Invalid role.")
+                        main_menu()
                 else:
                         computer_pick = random.choice(char_list)
                         print("The mysterious user joined the game.")
                         print("The mysterious user has picked a role.")
                         print("SELECT Y for yes \nSELECT N for no")
-                        if user_input != "Sheriff" and user_input != "Imposter":
-                                new_user_input = input("Do you think the mysterious user is an imposter ? (Y/N)").upper()
-                        if computer_pick != "Imposter" and new_user_input == "N":
-                                print("You won!")
-                                print("You won a free ice cream.")
-                                voucher = generate_voucher()
-                                print("Your voucher is", voucher)
-                        elif computer_pick == "Imposter" and new_user_input == "Y":
-                                print("You won!")
-                                print("You won a free ice cream.")
-                                voucher = generate_voucher()
-                                print("Your voucher is", voucher)
-                        else:
-                                print("You lost! 😭")
+                        if user_input == "Member" or user_input == "Survivor":
+                                new_user_input = input(
+                                "Do you think the mysterious user is an imposter? (Y/N)"
+                                ).upper()
+
+                                if computer_pick != "Imposter" and new_user_input == "N":
+                                        print("You won!")
+                                        print("You won a free ice cream.")
+                                        voucher = generate_voucher()
+                                        print("Your voucher is", voucher)
+
+                                elif computer_pick == "Imposter" and new_user_input == "Y":
+                                        print("You won!")
+                                        print("You won a free ice cream.")
+                                        voucher = generate_voucher()
+                                        print("Your voucher is", voucher)
+
+                                else:
+                                        print("You lost! 😭")
 
                         print("Your role: ", user_input)
                         print("mysterious user role: ", computer_pick)
@@ -107,7 +113,7 @@ def new_game():
                                         print("BUT you have officially won!")
                                         print("Slient win....")
                                         voucher = generate_voucher()
-                                print("Your voucher is", voucher)
+                                        print("Your voucher is", voucher)
                                 print("Your role: ", user_input)
                                 print("mysterious user role: ", computer_pick)
 
@@ -141,6 +147,8 @@ def new_game():
                                 print("mysterious user role: ", computer_pick)
         if continue_input == "N":
                 print("OK, you can relax or listen to some music.")
+
+        
 
 
 def main_menu():
