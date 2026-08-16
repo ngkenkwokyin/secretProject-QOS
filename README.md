@@ -24,3 +24,7 @@ You are welcome to use or modify the code, as long as the author's GitHub userna
 
 ## Project details
 The project file QOS.py has been completed on 16 Aug 2026 
+
+## For collaboration, questions, or further inquiries regarding this project
+Let's connect—feel free to drop me a DM on LinkedIn
+LinkedIn: https://www.linkedin.com/in/kenneth-ng-b74ba5360
